@@ -5,10 +5,11 @@ import numpy as np
 # 여기서부터 자유롭게 작성하세요
 
 # ── 예시 구조 (지우고 새로 써도 됩니다) ────────────────
+
 df = pd.read_csv(
     "music_data.txt",
     sep="\t",
-    encoding="utf-16"
+    encoding="utf-8-sig"
 )
 
 st.title("나의 음악 대시보드")           # ← 제목을 바꾸세요
