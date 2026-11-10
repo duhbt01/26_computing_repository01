@@ -6,7 +6,7 @@ import numpy as np
 
 # ── 예시 구조 (지우고 새로 써도 됩니다) ────────────────
 df = pd.read_csv(
-    "10강_과제용_음악_data.txt",
+    "music_data.txt",
     sep="\t",
     encoding="utf-16"
 )
