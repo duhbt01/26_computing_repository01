@@ -6,11 +6,15 @@ import numpy as np
 
 # ── 예시 구조 (지우고 새로 써도 됩니다) ────────────────
 
-df = pd.read_csv(
-    "music_data.txt",
-    sep="\t",
-    encoding="utf-8-sig"
-)
+from pathlib import Path
+import pandas as pd
+
+data_path = Path(__file__).parent / "music_data.txt"
+
+try:
+    df = pd.read_csv(data_path, sep="\t", encoding="utf-8-sig")
+except UnicodeDecodeError:
+    df = pd.read_csv(data_path, sep="\t", encoding="utf-16")
 
 st.title("나의 음악 대시보드")           # ← 제목을 바꾸세요
 st.caption("10강 실습 과제")
